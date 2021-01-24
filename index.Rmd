@@ -1,0 +1,16 @@
+---
+title: "Roshni Katrak-Adefowora"
+image: "roshni.jpg"
+links:
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/roshni-katrak-adefowora/"
+  - label: GitHub
+    url: "https://github.com/roshnikatrak"
+  - label: Email
+    url: "mailto:rkatrak-adefowora@ucsb.edu"
+output:
+  postcards::jolla
+site: distill::distill_website
+---
+ 
+I am a first-year Master's student at UC Santa Barbara's Bren School of Environmental Science & Management.
