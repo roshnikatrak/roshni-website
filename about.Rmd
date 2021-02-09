@@ -1,10 +1,26 @@
 ---
-title: "About this site"
+title: "About Me"
 description: |
-  Some additional details about the website
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+
+<center> 
+
+**Experience**
+
+I received my Bachelor of Arts in Biology with a concentration in Environmental Science from Occidental College in 2019. During my time at Occidental and since graduating, I worked as the Field Administrator for the Pasadena-based land trust, Arroyos & Foothills Conservancy (AFC). My work involved coordinating and leading environmental educational field trips for K-12 students on AFC’s conserved properties, building public awareness around conservation, and monitoring wildlife cameras. I used these wildlife cameras, along with community science and landscape data, to study connectivity among urban wildlife populations and to determine optimal placement of wildlife corridors in Los Angeles.
+
+
+![Switzer Falls, Los Angles, CA](roshhiking.png){width=50px}
+
+**Interests**
+
+Driven by a desire to protect wildlife and natural open spaces, I came to Bren to pursue the Conservation Planning specialization. I strongly believe in the importance of educating and working with the public to solve environmental issues, as well as including community scientists in scientific research, a topic I studied in-depth during my undergraduate research. This inspired me to pursue the Strategic Environmental Communication and Media Focus, through which I hope to instill in others enthusiasm and an appreciation for the natural world.
+
+In my free time, I can often be found out hiking or swimming in the ocean. Outside of my love for nature, I enjoy singing, baking, painting, and learning Kalari.
+
+</center>
 
