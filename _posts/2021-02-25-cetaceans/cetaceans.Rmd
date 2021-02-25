@@ -1,0 +1,71 @@
+---
+title: "Cetaceans Species Richness Analysis"
+description: |
+  A short description of the post.
+author:
+  - name: Unknown
+    url: {}
+date: 02-25-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(raster)
+library(tidyverse)
+library(here)
+library(sf)
+library(rnaturalearth)
+```
+
+```{r, results = FALSE}
+#read in the data
+cetaceans <- list.files(path = here("_posts", "2021-02-25-cetaceans", "ca_cetaceans"), full.names = TRUE)
+cetaceans_raster <- raster::stack(cetaceans)
+
+#get coastline for CA
+ne_ca <- ne_download(scale = "medium", type = "states", category = "cultural", returnclass = "sf") %>% 
+  filter(name == "California")
+
+#make threshold function
+threshold_present <- function(x) {
+  y <- ifelse(x >= 0.6, 1, 0) #if >= 0.6, then 1, if not then 0
+  return(y)
+}
+```
+
+```{r}
+#threshold function
+species_threshold <- calc(cetaceans_raster, fun = threshold_present)
+
+#find number of species in each cell
+species_richness <- calc(species_threshold, fun = sum, na.rm = TRUE)
+
+#convert raster to dataframe for ggplot
+species_richness_df <- raster::rasterToPoints(species_richness) %>% #convert to matrix
+  as.data.frame() %>% #convert to dataframe
+  filter(layer > 0) #remove zeros
+```
+
+
+```{r}
+#plot species richness
+ggplot()+
+  geom_raster(data = species_richness_df, aes(x = x, y = y, fill = layer))+
+  geom_sf(data = ne_ca)+
+  coord_sf(xlim = c(-125,-115), ylim = c(32,38))+ #set x and y limits of graph
+  scale_fill_gradient(low = 'violetred', high = 'purple4')+
+  theme_light()+
+  labs(x="Longitude",
+       y="Latitude",
+       fill="Species Richness")
+```
+
+**Figure 1. Cetacean species richness in the California Bight.** For 35 cetacean species, the probability of occurence was used to find species richness. The presence of each species was determined using a threshold value 0f 0.6. Data: AquaMaps (2016).
+
+Citation: AquaMaps (Kaschner, K., Rius-Barile, J., Kesner-Reyes, K., Garilao, C., Kullander, S., Rees, T., & Froese, R. (2016). AquaMaps: Predicted range maps for aquatic species. www.aquamaps.org
+

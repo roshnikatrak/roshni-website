@@ -1,0 +1,80 @@
+---
+title: "California Oil Spills"
+description: |
+  Spatial visualization of oil spill events in California.
+author:
+  - name: "Roshni Katrak-Adefowora"
+    url: {}
+date: 02-25-2021
+output:
+  distill::distill_article:
+    self_contained: false
+    code_folding: hide
+---
+
+
+In this report, I explore oil spill incident tracking data in California in 2008. The data is provided by The California Department of Fish and Wildlife.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(tidyverse)
+library(here)
+library(janitor)
+library(sf)
+library(tmap)
+```
+
+Initial Data Wrangling
+
+```{r, results = FALSE}
+#Read in the data
+oil_spill <- read_sf(here("_posts", "2021-02-25-oilspills", "oilspill","oilspill.shp")) %>% 
+  clean_names()
+
+ca_counties <- read_sf(here("_posts", "2021-02-25-oilspills", "ca_counties","CA_Counties_TIGER2016.shp"))
+
+#check counties CRS
+ca_counties %>% st_crs()
+
+#check oil spill CRS
+oil_spill %>% st_crs()
+```
+
+Creating the Interactive Map
+
+```{r}
+#set tmap to interactive mode
+tmap_mode(mode = "view")
+
+#make tmap
+tm_shape(ca_counties) +
+  tm_polygons()+
+  tm_shape(oil_spill)+
+  tm_dots()
+```
+
+**Figure 1. Interactive map of oil spill events in California (2008).**
+
+Creating the Choropleth Map
+
+```{r}
+#join oil spill and CA
+oil_spill_ca <- ca_counties %>% 
+  st_join(oil_spill)
+
+#inland oil spill counts
+oil_spill_inland_counts <- oil_spill_ca %>% 
+  filter(inlandmari == "Inland") %>% 
+  count(localecoun)
+
+#make choropleth
+ggplot(data = oil_spill_inland_counts)+
+  geom_sf(aes(fill = n), color = "white", size = 0.1)+
+  scale_fill_gradientn(colors = c("#4558AE","#9D61DA", "#CF5AF2"))+
+  theme_light()+
+  labs(x = "Longitude",
+       y = "Latitude",
+       fill = "Number of oil spills")
+```
+
+**Figure 2. Inland oil spills in each California county (2008).**

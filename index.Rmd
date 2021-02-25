@@ -13,4 +13,6 @@ output:
 site: distill::distill_website
 ---
  
-Hi, I'm Roshni! I am a first-year Master's student at UC Santa Barbara's Bren School of Environmental Science & Management. I am broadly interested in the conservation of natural spaces and environmental communication. 
+Hi, I'm Roshni! I am a first-year Master's student at UC Santa Barbara's Bren School of Environmental Science & Management. I am passionate about conservation biology and environmental communication. I hope to use my skills and interests to aid in wildlife conservation and encourage environmental stewardship.
+
+

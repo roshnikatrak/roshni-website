@@ -1,5 +1,6 @@
 name: "."
 title: "Roshni Katrak-Adefowora"
+theme: theme.css
 description: |
   Roshni Katrak-Adefowora
 output_dir: "docs"
