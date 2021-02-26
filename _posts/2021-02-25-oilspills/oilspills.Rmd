@@ -12,9 +12,6 @@ output:
     code_folding: hide
 ---
 
-
-In this report, I explore oil spill incident tracking data in California in 2008. The data is provided by The California Department of Fish and Wildlife.
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 library(tidyverse)

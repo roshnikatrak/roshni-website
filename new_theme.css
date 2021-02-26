@@ -10,7 +10,7 @@
 html {
   /*-- Main font sizes --*/
   --title-size:      50px;
-  --body-size:       17px;
+  --body-size:       19px;
   --code-size:       14px;
   --aside-size:      12px;
   --fig-cap-size:    13px;
@@ -32,9 +32,9 @@ html {
 /*-- ARTICLE METADATA --*/
 d-byline {
   --heading-size:    9.6px;
-  --heading-color:   #549CBD;
+  --heading-color:   #54BD7D;
   --body-size:       12.8px;
-  --body-color:      #549CBD;
+  --body-color:      #54BD7D;
 }
 
 /*-- WEBSITE HEADER + FOOTER --*/
