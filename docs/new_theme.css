@@ -1,48 +1,56 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Amiri');
+@import url('https://fonts.googleapis.com/css2?family=Bitter');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono');
+@import url('https://fonts.googleapis.com/css2?family=Benne&family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Benne&family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Benne&family=Enriqueta&family=Roboto+Condensed&display=swap');
 
 html {
   /*-- Main font sizes --*/
-  -title-size:      50px;
-  -body-size:       17px;
-  -code-size:       14px;
-  -aside-size:      12px;
-  -fig-cap-size:    13px;
+  --title-size:      50px;
+  --body-size:       17px;
+  --code-size:       14px;
+  --aside-size:      12px;
+  --fig-cap-size:    13px;
   /*-- Main font colors --*/
-  -title-color:     #000000;
-  -header-color:    #000000;
-  -body-color:      #000000;
-  -aside-color:     #000000;
-  -fig-cap-color:   #000000;
+  --title-color:     #000000;
+  --header-color:    #000000;
+  --body-color:      #000000;
+  --aside-color:     #000000;
+  --fig-cap-color:   #000000;
   /*-- Specify custom fonts ~~~ must be imported above   --*/
-  -heading-font:    "Roboto Condensed", sans-serif;
-  -mono-font:       "Roboto Condensed", sans-serif;
-  -body-font:       "Roboto Condensed", sans-serif;
-  -navbar-font:     "Roboto Condensed", sans-serif;  /* websites + blogs only */
+  --heading-font:    "Enriqueta", serif;
+  --mono-font:       "Enriqueta", serif;
+  --body-font:       "Enriqueta", serif;
+  --navbar-font:     "Enriqueta", serif;
 }
+
+
 
 /*-- ARTICLE METADATA --*/
 d-byline {
-  -heading-size:    9.6px;
-  -heading-color:   #549CBD;
-  -body-size:       12.8px;
-  -body-color:      #549CBD;
+  --heading-size:    9.6px;
+  --heading-color:   #549CBD;
+  --body-size:       12.8px;
+  --body-color:      #549CBD;
 }
 
 /*-- WEBSITE HEADER + FOOTER --*/
 /* These properties only apply to Distill sites and blogs  */
 
 .distill-site-header {
-  -title-size:       18px;
-  -text-color:       #FFFFFF;
-  -text-size:        15px;
-  -hover-color:      #FFFFFF;
-  -bkgd-color:       #549CBD;
+  --title-size:       18px;
+  --text-color:       #FFFFFF;
+  --text-size:        15px;
+  --hover-color:      #FFFFFF;
+  --bkgd-color:       #549CBD;
 }
 
 .distill-site-footer {
-  -text-color:       #FFFFFF;
-  -text-size:        15px;
-  -hover-color:      #FFFFFF;
-  -bkgd-color:       #549CBD;
+  --text-color:       #FFFFFF;
+  --text-size:        15px;
+  --hover-color:      #FFFFFF;
+  --bkgd-color:       #549CBD;
 }
