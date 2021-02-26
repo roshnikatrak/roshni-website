@@ -1,14 +1,15 @@
 ---
 title: "Cetaceans Species Richness Analysis"
 description: |
-  A short description of the post.
+  Mapping species richness of California cetacean species.
 author:
-  - name: Unknown
+  - name: Roshni Katrak-Adefowora
     url: {}
 date: 02-25-2021
 output:
   distill::distill_article:
     self_contained: false
+    code_folding: hide
 ---
 
 
@@ -21,6 +22,8 @@ library(here)
 library(sf)
 library(rnaturalearth)
 ```
+
+Initial Data Wrangling
 
 ```{r, results = FALSE}
 #read in the data
@@ -36,24 +39,22 @@ threshold_present <- function(x) {
   y <- ifelse(x >= 0.6, 1, 0) #if >= 0.6, then 1, if not then 0
   return(y)
 }
-```
 
-```{r}
-#threshold function
+#use threshold function
 species_threshold <- calc(cetaceans_raster, fun = threshold_present)
 
 #find number of species in each cell
 species_richness <- calc(species_threshold, fun = sum, na.rm = TRUE)
 
-#convert raster to dataframe for ggplot
+#convert raster to data frame for ggplot
 species_richness_df <- raster::rasterToPoints(species_richness) %>% #convert to matrix
   as.data.frame() %>% #convert to dataframe
   filter(layer > 0) #remove zeros
 ```
 
+Plot Species Richness
 
 ```{r}
-#plot species richness
 ggplot()+
   geom_raster(data = species_richness_df, aes(x = x, y = y, fill = layer))+
   geom_sf(data = ne_ca)+
@@ -67,5 +68,5 @@ ggplot()+
 
 **Figure 1. Cetacean species richness in the California Bight.** For 35 cetacean species, the probability of occurence was used to find species richness. The presence of each species was determined using a threshold value 0f 0.6. Data: AquaMaps (2016).
 
-Citation: AquaMaps (Kaschner, K., Rius-Barile, J., Kesner-Reyes, K., Garilao, C., Kullander, S., Rees, T., & Froese, R. (2016). AquaMaps: Predicted range maps for aquatic species. www.aquamaps.org
+**Citation:** AquaMaps (Kaschner, K., Rius-Barile, J., Kesner-Reyes, K., Garilao, C., Kullander, S., Rees, T., & Froese, R. (2016). AquaMaps: Predicted range maps for aquatic species. www.aquamaps.org
 
