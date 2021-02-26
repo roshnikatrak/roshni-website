@@ -1,9 +1,9 @@
 name: "."
 title: "Roshni Katrak-Adefowora"
-theme: new_theme.css
 description: |
   Roshni Katrak-Adefowora
 output_dir: "docs"
+theme: new_theme.css
 navbar:
   right:
     - text: "Home"
