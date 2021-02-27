@@ -88,7 +88,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_meta_tags-->
   <title>Mono Lake Levels</title>
   
-  <meta property="description" itemprop="description" content="Visualizing changing water levels in Mono Lake (1850-2017)"/>
+  <meta property="description" itemprop="description" content="Visualizing changing water levels in Mono Lake from 1850 to 2017."/>
   
   
   <!--  https://schema.org/Article -->
@@ -99,19 +99,19 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="Mono Lake Levels"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Visualizing changing water levels in Mono Lake (1850-2017)"/>
+  <meta property="og:description" content="Visualizing changing water levels in Mono Lake from 1850 to 2017."/>
   <meta property="og:locale" content="en_US"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:title" content="Mono Lake Levels"/>
-  <meta property="twitter:description" content="Visualizing changing water levels in Mono Lake (1850-2017)"/>
+  <meta property="twitter:description" content="Visualizing changing water levels in Mono Lake from 1850 to 2017."/>
   
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Mono Lake Levels"]},{"type":"character","attributes":{},"value":["Visualizing changing water levels in Mono Lake (1850-2017)\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Roshni Katrak-Adefowora"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["02-24-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","code_folding"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"character","attributes":{},"value":["hide"]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Mono Lake Levels"]},{"type":"character","attributes":{},"value":["Visualizing changing water levels in Mono Lake from 1850 to 2017.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Roshni Katrak-Adefowora"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["02-24-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","code_folding"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"character","attributes":{},"value":["hide"]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1454,7 +1454,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Mono Lake Levels","description":"Visualizing changing water levels in Mono Lake (1850-2017)","authors":[{"author":"Roshni Katrak-Adefowora","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-02-24T00:00:00.000-08:00","citationText":"Katrak-Adefowora, 2021"}
+{"title":"Mono Lake Levels","description":"Visualizing changing water levels in Mono Lake from 1850 to 2017.","authors":[{"author":"Roshni Katrak-Adefowora","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-02-24T00:00:00.000-08:00","citationText":"Katrak-Adefowora, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1467,7 +1467,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1>Mono Lake Levels</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Visualizing changing water levels in Mono Lake (1850-2017)</p></p>
+<p><p>Visualizing changing water levels in Mono Lake from 1850 to 2017.</p></p>
 </div>
 
 <div class="d-byline">
@@ -1511,25 +1511,25 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <summary>hide</summary>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>ggplot</span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>mono</span>, <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>year</span>, y <span class='op'>=</span> <span class='va'>lake_level_feet_above_sea_level</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>geom_line</span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>8</span>, color <span class='op'>=</span> <span class='st'>"dodgerblue4"</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'>geom_line</span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>3</span>, color <span class='op'>=</span> <span class='st'>"dodgerblue4"</span><span class='op'>)</span><span class='op'>+</span>
   <span class='fu'>labs</span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Time (years)"</span>,
        y <span class='op'>=</span> <span class='st'>"Lake level (feet above sea level)"</span><span class='op'>)</span><span class='op'>+</span>
   <span class='fu'>scale_x_continuous</span><span class='op'>(</span>expand <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>0</span><span class='op'>)</span>,
                      breaks <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>1850</span>, <span class='fl'>2020</span>, <span class='fl'>20</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span> <span class='co'>#label every 2 ticks from 1850 to 2017</span>
   <span class='fu'>geom_hline</span><span class='op'>(</span>yintercept <span class='op'>=</span> <span class='fl'>6377</span>,
-             size <span class='op'>=</span> <span class='fl'>5</span>,
+             size <span class='op'>=</span> <span class='fl'>2</span>,
              linetype <span class='op'>=</span> <span class='st'>"dashed"</span>,
              color <span class='op'>=</span> <span class='st'>"#9B53A8"</span><span class='op'>)</span><span class='op'>+</span> <span class='co'>#land bridges</span>
   <span class='fu'>geom_hline</span><span class='op'>(</span>yintercept <span class='op'>=</span> <span class='fl'>6360</span>,
-             size <span class='op'>=</span> <span class='fl'>5</span>,
+             size <span class='op'>=</span> <span class='fl'>2</span>,
              linetype <span class='op'>=</span> <span class='st'>"dashed"</span>,
              color <span class='op'>=</span> <span class='st'>"#7A3A86"</span><span class='op'>)</span><span class='op'>+</span> <span class='co'>#decrease in food begins to affect birds</span>
   <span class='fu'>geom_hline</span><span class='op'>(</span>yintercept <span class='op'>=</span> <span class='fl'>6350</span>,
-             size <span class='op'>=</span> <span class='fl'>5</span>,
+             size <span class='op'>=</span> <span class='fl'>2</span>,
              linetype <span class='op'>=</span> <span class='st'>"dashed"</span>,
              color <span class='op'>=</span> <span class='st'>"#561F60"</span><span class='op'>)</span><span class='op'>+</span> <span class='co'>#impacts are acute</span>
   <span class='fu'>geom_hline</span><span class='op'>(</span>yintercept <span class='op'>=</span> <span class='fl'>6392</span>,
-             size <span class='op'>=</span> <span class='fl'>5</span>,
+             size <span class='op'>=</span> <span class='fl'>2</span>,
              linetype <span class='op'>=</span> <span class='st'>"dashed"</span>,
              color <span class='op'>=</span> <span class='st'>"#B55DC0"</span><span class='op'>)</span><span class='op'>+</span> <span class='co'>#Decision 1613 level</span>
   <span class='fu'>theme_light</span><span class='op'>(</span><span class='op'>)</span><span class='op'>+</span>
@@ -1539,35 +1539,32 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
                   fill <span class='op'>=</span> <span class='st'>"steelblue4"</span>,
                   alpha <span class='op'>=</span> <span class='fl'>0.15</span><span class='op'>)</span><span class='op'>+</span> <span class='co'>#fill area under line</span>
   <span class='fu'>coord_cartesian</span><span class='op'>(</span>clip <span class='op'>=</span> <span class='st'>"off"</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>theme</span><span class='op'>(</span>plot.margin <span class='op'>=</span> <span class='fu'>unit</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>10</span>,<span class='fl'>150</span>,<span class='fl'>10</span>,<span class='fl'>10</span><span class='op'>)</span>, <span class='st'>"lines"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span> <span class='co'>#make room for annotations outside plot</span>
+  <span class='fu'>theme</span><span class='op'>(</span>plot.margin <span class='op'>=</span> <span class='fu'>unit</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>25</span>,<span class='fl'>1</span>,<span class='fl'>1</span><span class='op'>)</span>, <span class='st'>"lines"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span> <span class='co'>#make room for annotations outside plot</span>
   <span class='fu'>geom_label</span><span class='op'>(</span>label <span class='op'>=</span> <span class='st'>"Decision 1613 mandated \n lake level (6392ft)"</span>,
              x <span class='op'>=</span> <span class='fl'>2019</span>,
              y <span class='op'>=</span> <span class='fl'>6392</span>,
-             size <span class='op'>=</span> <span class='fl'>18</span>,
+             size <span class='op'>=</span> <span class='fl'>9</span>,
              label.size <span class='op'>=</span> <span class='fl'>0.1</span>,
-             label.padding <span class='op'>=</span> <span class='fu'>unit</span><span class='op'>(</span><span class='fl'>0.65</span>, <span class='st'>"lines"</span><span class='op'>)</span>,
              label.r <span class='op'>=</span> <span class='fu'>unit</span><span class='op'>(</span><span class='fl'>0.4</span>, <span class='st'>"lines"</span><span class='op'>)</span>,
              fontface <span class='op'>=</span> <span class='st'>"bold"</span>,
              color <span class='op'>=</span> <span class='st'>"white"</span>, 
              fill <span class='op'>=</span> <span class='st'>"#B55DC0"</span>,
              hjust<span class='op'>=</span><span class='fl'>0</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>geom_label</span><span class='op'>(</span>label <span class='op'>=</span> <span class='st'>"Land bridges \n emerge (6377ft)"</span>,
+  <span class='fu'>geom_label</span><span class='op'>(</span>label <span class='op'>=</span> <span class='st'>"Land bridges \n emerge (6377ft) "</span>,
              x <span class='op'>=</span> <span class='fl'>2019</span>,
              y <span class='op'>=</span> <span class='fl'>6377</span>,
-             size <span class='op'>=</span> <span class='fl'>18</span>,
-             label.padding <span class='op'>=</span> <span class='fu'>unit</span><span class='op'>(</span><span class='fl'>0.65</span>, <span class='st'>"lines"</span><span class='op'>)</span>,
+             size <span class='op'>=</span> <span class='fl'>9</span>,
              label.r <span class='op'>=</span> <span class='fu'>unit</span><span class='op'>(</span><span class='fl'>0.4</span>, <span class='st'>"lines"</span><span class='op'>)</span>,
              label.size <span class='op'>=</span> <span class='fl'>0.1</span>,
              fontface <span class='op'>=</span> <span class='st'>"bold"</span>,
              color <span class='op'>=</span> <span class='st'>"white"</span>, 
              fill <span class='op'>=</span> <span class='st'>"#9B53A8"</span>,
              hjust<span class='op'>=</span><span class='fl'>0</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>geom_label</span><span class='op'>(</span>label <span class='op'>=</span> <span class='st'>"Bird populations \n threatened (6360ft)"</span>,
+  <span class='fu'>geom_label</span><span class='op'>(</span>label <span class='op'>=</span> <span class='st'>"Bird populations \n threatened (6360ft) "</span>,
              x <span class='op'>=</span> <span class='fl'>2019</span>,
              y <span class='op'>=</span> <span class='fl'>6360</span>,
-             size <span class='op'>=</span> <span class='fl'>18</span>,
+             size <span class='op'>=</span> <span class='fl'>9</span>,
              label.size <span class='op'>=</span> <span class='fl'>0.1</span>,
-             label.padding <span class='op'>=</span> <span class='fu'>unit</span><span class='op'>(</span><span class='fl'>0.65</span>, <span class='st'>"lines"</span><span class='op'>)</span>,
              label.r <span class='op'>=</span> <span class='fu'>unit</span><span class='op'>(</span><span class='fl'>0.4</span>, <span class='st'>"lines"</span><span class='op'>)</span>,
              fontface <span class='op'>=</span> <span class='st'>"bold"</span>,
              color <span class='op'>=</span> <span class='st'>"white"</span>, 
@@ -1576,21 +1573,18 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <span class='fu'>geom_label</span><span class='op'>(</span>label <span class='op'>=</span> <span class='st'>"Bird populations extremely \n threatened (6350ft)"</span>,
              x <span class='op'>=</span> <span class='fl'>2019</span>,
              y <span class='op'>=</span> <span class='fl'>6350</span>,
-             size <span class='op'>=</span> <span class='fl'>18</span>,
+             size <span class='op'>=</span> <span class='fl'>9</span>,
              label.size <span class='op'>=</span> <span class='fl'>0.1</span>,
-             label.padding <span class='op'>=</span> <span class='fu'>unit</span><span class='op'>(</span><span class='fl'>0.65</span>, <span class='st'>"lines"</span><span class='op'>)</span>,
              label.r <span class='op'>=</span> <span class='fu'>unit</span><span class='op'>(</span><span class='fl'>0.4</span>, <span class='st'>"lines"</span><span class='op'>)</span>,
              fontface <span class='op'>=</span> <span class='st'>"bold"</span>,
              color <span class='op'>=</span> <span class='st'>"white"</span>, 
              fill <span class='op'>=</span> <span class='st'>"#561F60"</span>,
              hjust<span class='op'>=</span><span class='fl'>0</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>theme</span><span class='op'>(</span>axis.text <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>70</span><span class='op'>)</span>,
-        axis.title <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>80</span>, face <span class='op'>=</span> <span class='st'>"bold"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span> <span class='co'>#increase text size, change font</span>
   <span class='fu'>geom_point</span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>annotate_1941</span>, 
              <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>year</span>,
                  y <span class='op'>=</span> <span class='va'>lake_level_feet_above_sea_level</span><span class='op'>)</span>,
              color <span class='op'>=</span> <span class='st'>"#953661"</span>,
-             size <span class='op'>=</span> <span class='fl'>18</span><span class='op'>)</span><span class='op'>+</span>
+             size <span class='op'>=</span> <span class='fl'>9</span><span class='op'>)</span><span class='op'>+</span>
   <span class='fu'><a href='https://rdrr.io/pkg/ggrepel/man/geom_text_repel.html'>geom_label_repel</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>annotate_1941</span>,
                    <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>year</span>,
                        y <span class='op'>=</span> <span class='va'>lake_level_feet_above_sea_level</span><span class='op'>)</span>,
@@ -1598,17 +1592,17 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
                    nudge_y <span class='op'>=</span> <span class='fl'>40</span>,
                    color <span class='op'>=</span> <span class='st'>"white"</span>,
                    segment.color <span class='op'>=</span> <span class='st'>"#953661"</span>,
-                   segment.size <span class='op'>=</span> <span class='fl'>1</span>,
+                   segment.size <span class='op'>=</span> <span class='fl'>2</span>,
                    label.padding <span class='op'>=</span> <span class='fl'>0.65</span>,
                    fill <span class='op'>=</span> <span class='st'>"#953661"</span>,
-                   size <span class='op'>=</span> <span class='fl'>18</span>,
+                   size <span class='op'>=</span> <span class='fl'>9</span>,
                    label.size <span class='op'>=</span> <span class='fl'>0.1</span>,
                    fontface <span class='op'>=</span> <span class='st'>"bold"</span><span class='op'>)</span><span class='op'>+</span>
   <span class='fu'>geom_point</span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>annotate_1978</span>, 
              <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>year</span>,
                  y <span class='op'>=</span> <span class='va'>lake_level_feet_above_sea_level</span><span class='op'>)</span>,
              color <span class='op'>=</span> <span class='st'>"#B47924"</span>,
-             size <span class='op'>=</span> <span class='fl'>18</span><span class='op'>)</span><span class='op'>+</span>
+             size <span class='op'>=</span> <span class='fl'>9</span><span class='op'>)</span><span class='op'>+</span>
   <span class='fu'><a href='https://rdrr.io/pkg/ggrepel/man/geom_text_repel.html'>geom_label_repel</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>annotate_1978</span>,
                    <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>year</span>,
                        y <span class='op'>=</span> <span class='va'>lake_level_feet_above_sea_level</span><span class='op'>)</span>,
@@ -1616,17 +1610,17 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
                    nudge_y <span class='op'>=</span> <span class='op'>-</span><span class='fl'>20</span>,
                    color <span class='op'>=</span> <span class='st'>"white"</span>,
                    segment.color <span class='op'>=</span> <span class='st'>"#B47924"</span>,
-                   segment.size <span class='op'>=</span> <span class='fl'>1</span>,
+                   segment.size <span class='op'>=</span> <span class='fl'>2</span>,
                    label.padding <span class='op'>=</span> <span class='fl'>0.65</span>,
                    fill <span class='op'>=</span> <span class='st'>"#B47924"</span>,
-                   size <span class='op'>=</span> <span class='fl'>18</span>,
+                   size <span class='op'>=</span> <span class='fl'>9</span>,
                    label.size <span class='op'>=</span> <span class='fl'>0.1</span>,
                    fontface <span class='op'>=</span> <span class='st'>"bold"</span><span class='op'>)</span><span class='op'>+</span>
   <span class='fu'>geom_point</span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>annotate_1983</span>, 
              <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>year</span>,
                  y <span class='op'>=</span> <span class='va'>lake_level_feet_above_sea_level</span><span class='op'>)</span>,
              color <span class='op'>=</span> <span class='st'>"#3A8663"</span>,
-             size <span class='op'>=</span> <span class='fl'>18</span><span class='op'>)</span><span class='op'>+</span>
+             size <span class='op'>=</span> <span class='fl'>9</span><span class='op'>)</span><span class='op'>+</span>
   <span class='fu'><a href='https://rdrr.io/pkg/ggrepel/man/geom_text_repel.html'>geom_label_repel</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>annotate_1983</span>,
                    <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>year</span>,
                        y <span class='op'>=</span> <span class='va'>lake_level_feet_above_sea_level</span><span class='op'>)</span>,
@@ -1634,17 +1628,17 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
                    nudge_y <span class='op'>=</span> <span class='fl'>28</span>,
                    color <span class='op'>=</span> <span class='st'>"white"</span>,
                    segment.color <span class='op'>=</span> <span class='st'>"#3A8663"</span>,
-                   segment.size <span class='op'>=</span> <span class='fl'>1</span>,
+                   segment.size <span class='op'>=</span> <span class='fl'>2</span>,
                    label.padding <span class='op'>=</span> <span class='fl'>0.65</span>,
                    fill <span class='op'>=</span> <span class='st'>"#3A8663"</span>,
-                   size <span class='op'>=</span> <span class='fl'>18</span>,
+                   size <span class='op'>=</span> <span class='fl'>9</span>,
                    label.size <span class='op'>=</span> <span class='fl'>0.1</span>,
                    fontface <span class='op'>=</span> <span class='st'>"bold"</span><span class='op'>)</span><span class='op'>+</span>
   <span class='fu'>geom_point</span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>annotate_1994</span>, 
              <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>year</span>,
                  y <span class='op'>=</span> <span class='va'>lake_level_feet_above_sea_level</span><span class='op'>)</span>,
              color <span class='op'>=</span> <span class='st'>"#369590"</span>,
-             size <span class='op'>=</span> <span class='fl'>18</span><span class='op'>)</span><span class='op'>+</span>
+             size <span class='op'>=</span> <span class='fl'>9</span><span class='op'>)</span><span class='op'>+</span>
   <span class='fu'><a href='https://rdrr.io/pkg/ggrepel/man/geom_text_repel.html'>geom_label_repel</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>annotate_1994</span>,
                    <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>year</span>,
                        y <span class='op'>=</span> <span class='va'>lake_level_feet_above_sea_level</span><span class='op'>)</span>,
@@ -1652,34 +1646,36 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
                    nudge_y <span class='op'>=</span> <span class='op'>-</span><span class='fl'>8</span>,
                    color <span class='op'>=</span> <span class='st'>"white"</span>,
                    segment.color <span class='op'>=</span> <span class='st'>"#369590"</span>,
-                   segment.size <span class='op'>=</span> <span class='fl'>1</span>,
+                   segment.size <span class='op'>=</span> <span class='fl'>2</span>,
                    label.padding <span class='op'>=</span> <span class='fl'>0.65</span>,
                    fill <span class='op'>=</span> <span class='st'>"#369590"</span>,
-                   size <span class='op'>=</span> <span class='fl'>18</span>,
+                   size <span class='op'>=</span> <span class='fl'>9</span>,
                    label.size <span class='op'>=</span> <span class='fl'>0.1</span>,
                    fontface <span class='op'>=</span> <span class='st'>"bold"</span><span class='op'>)</span><span class='op'>+</span>
   <span class='fu'>geom_point</span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>annotate_1998</span>, 
              <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>year</span>,
                  y <span class='op'>=</span> <span class='va'>lake_level_feet_above_sea_level</span><span class='op'>)</span>,
              color <span class='op'>=</span> <span class='st'>"#332A8D"</span>,
-             size <span class='op'>=</span> <span class='fl'>18</span><span class='op'>)</span><span class='op'>+</span>
+             size <span class='op'>=</span> <span class='fl'>9</span><span class='op'>)</span><span class='op'>+</span>
   <span class='fu'><a href='https://rdrr.io/pkg/ggrepel/man/geom_text_repel.html'>geom_label_repel</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>annotate_1998</span>,
                    <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>year</span>,
                        y <span class='op'>=</span> <span class='va'>lake_level_feet_above_sea_level</span><span class='op'>)</span>,
                    label <span class='op'>=</span> <span class='st'>"Restoration \n Orders (1998)"</span>,
-                   nudge_y <span class='op'>=</span> <span class='fl'>14</span>,
+                   nudge_y <span class='op'>=</span> <span class='fl'>13</span>,
                    color <span class='op'>=</span> <span class='st'>"white"</span>,
                    segment.color <span class='op'>=</span> <span class='st'>"#332A8D"</span>,
-                   segment.size <span class='op'>=</span> <span class='fl'>1</span>,
+                   segment.size <span class='op'>=</span> <span class='fl'>2</span>,
                    label.padding <span class='op'>=</span> <span class='fl'>0.65</span>,
                    fill <span class='op'>=</span> <span class='st'>"#332A8D"</span>,
-                   size <span class='op'>=</span> <span class='fl'>18</span>,
+                   size <span class='op'>=</span> <span class='fl'>9</span>,
                    label.size <span class='op'>=</span> <span class='fl'>0.1</span>,
-                   fontface <span class='op'>=</span> <span class='st'>"bold"</span><span class='op'>)</span>
+                   fontface <span class='op'>=</span> <span class='st'>"bold"</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'>theme</span><span class='op'>(</span>axis.text <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>30</span><span class='op'>)</span>,
+        axis.title <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>35</span>, face <span class='op'>=</span> <span class='st'>"bold"</span><span class='op'>)</span><span class='op'>)</span>
 </code></pre>
 </div>
 </details>
-<p><img src="monolake_files/figure-html5/unnamed-chunk-2-1.png" width="5760" /></p>
+<p><img src="monolake_files/figure-html5/unnamed-chunk-2-1.png" width="2208" /></p>
 </div>
 <p><strong>Figure 1. Mono Lake levels (1850-2017).</strong> Changes in Mono Lake levels (feet above sea level) are shown from 1850 to 2017. Four lake water levels are shown. The first, at 6392 feet, is Decision 1613’s mandated management level (the level Mono Lake must be allowed to rise to). At 6377 feet, land bridges emerge between the mainland and the islands, giving predators access to bird nesting areas. Next, at 6360 feet, birds’ food sources are affected, which threatens the bird populations. If the lake level drops even lower to 6350 feet, the bird populations will be severely threatened. Five major events are also depicted on the graph. In 1941, the Los Angeles Department of Water and Power (LADWP) began diverting water from Mono Lake into Los Angeles, which caused an extreme drop in the lake level. In 1978, the Mono Lake Committee was formed to save Mono Lake. In 1983, the Committee won a lawsuite against LADWP, in which it claimed that the water diversions went against the Public Trust doctrine. In 1994, Decision 1613 was issued, which set a management lake level of 6392 feet that Mono Lake must be allowed to rise to, and required that DWP restore streams and habitats. In 1998, the State Water Board issued orders that required DWP to have a restoration plan.</p>
 <p><strong>Citations</strong></p>

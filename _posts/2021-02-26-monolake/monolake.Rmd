@@ -1,7 +1,7 @@
 ---
 title: "Mono Lake Levels"
 description: |
-  Visualizing changing water levels in Mono Lake (1850-2017)
+  Visualizing changing water levels in Mono Lake from 1850 to 2017.
 author:
   - name: "Roshni Katrak-Adefowora"
     url: {}
@@ -46,27 +46,27 @@ annotate_1998 <- mono %>%
 
 Making Annotated Plot of Mono Lake Levels Over Time
 
-```{r, fig.width = 60, fig.height=25}
+```{r, fig.width = 23, fig.height=14}
 ggplot(data = mono, aes(x = year, y = lake_level_feet_above_sea_level))+
-  geom_line(size = 8, color = "dodgerblue4")+
+  geom_line(size = 3, color = "dodgerblue4")+
   labs(x = "Time (years)",
        y = "Lake level (feet above sea level)")+
   scale_x_continuous(expand = c(0,0),
                      breaks = seq(1850, 2020, 20))+ #label every 2 ticks from 1850 to 2017
   geom_hline(yintercept = 6377,
-             size = 5,
+             size = 2,
              linetype = "dashed",
              color = "#9B53A8")+ #land bridges
   geom_hline(yintercept = 6360,
-             size = 5,
+             size = 2,
              linetype = "dashed",
              color = "#7A3A86")+ #decrease in food begins to affect birds
   geom_hline(yintercept = 6350,
-             size = 5,
+             size = 2,
              linetype = "dashed",
              color = "#561F60")+ #impacts are acute
   geom_hline(yintercept = 6392,
-             size = 5,
+             size = 2,
              linetype = "dashed",
              color = "#B55DC0")+ #Decision 1613 level
   theme_light()+
@@ -76,35 +76,32 @@ ggplot(data = mono, aes(x = year, y = lake_level_feet_above_sea_level))+
                   fill = "steelblue4",
                   alpha = 0.15)+ #fill area under line
   coord_cartesian(clip = "off")+
-  theme(plot.margin = unit(c(10,150,10,10), "lines"))+ #make room for annotations outside plot
+  theme(plot.margin = unit(c(1,25,1,1), "lines"))+ #make room for annotations outside plot
   geom_label(label = "Decision 1613 mandated \n lake level (6392ft)",
              x = 2019,
              y = 6392,
-             size = 18,
+             size = 9,
              label.size = 0.1,
-             label.padding = unit(0.65, "lines"),
              label.r = unit(0.4, "lines"),
              fontface = "bold",
              color = "white", 
              fill = "#B55DC0",
              hjust=0)+
-  geom_label(label = "Land bridges \n emerge (6377ft)",
+  geom_label(label = "Land bridges \n emerge (6377ft) ",
              x = 2019,
              y = 6377,
-             size = 18,
-             label.padding = unit(0.65, "lines"),
+             size = 9,
              label.r = unit(0.4, "lines"),
              label.size = 0.1,
              fontface = "bold",
              color = "white", 
              fill = "#9B53A8",
              hjust=0)+
-  geom_label(label = "Bird populations \n threatened (6360ft)",
+  geom_label(label = "Bird populations \n threatened (6360ft) ",
              x = 2019,
              y = 6360,
-             size = 18,
+             size = 9,
              label.size = 0.1,
-             label.padding = unit(0.65, "lines"),
              label.r = unit(0.4, "lines"),
              fontface = "bold",
              color = "white", 
@@ -113,21 +110,18 @@ ggplot(data = mono, aes(x = year, y = lake_level_feet_above_sea_level))+
   geom_label(label = "Bird populations extremely \n threatened (6350ft)",
              x = 2019,
              y = 6350,
-             size = 18,
+             size = 9,
              label.size = 0.1,
-             label.padding = unit(0.65, "lines"),
              label.r = unit(0.4, "lines"),
              fontface = "bold",
              color = "white", 
              fill = "#561F60",
              hjust=0)+
-  theme(axis.text = element_text(size = 70),
-        axis.title = element_text(size = 80, face = "bold"))+ #increase text size, change font
   geom_point(data = annotate_1941, 
              aes(x = year,
                  y = lake_level_feet_above_sea_level),
              color = "#953661",
-             size = 18)+
+             size = 9)+
   geom_label_repel(data = annotate_1941,
                    aes(x = year,
                        y = lake_level_feet_above_sea_level),
@@ -135,17 +129,17 @@ ggplot(data = mono, aes(x = year, y = lake_level_feet_above_sea_level))+
                    nudge_y = 40,
                    color = "white",
                    segment.color = "#953661",
-                   segment.size = 1,
+                   segment.size = 2,
                    label.padding = 0.65,
                    fill = "#953661",
-                   size = 18,
+                   size = 9,
                    label.size = 0.1,
                    fontface = "bold")+
   geom_point(data = annotate_1978, 
              aes(x = year,
                  y = lake_level_feet_above_sea_level),
              color = "#B47924",
-             size = 18)+
+             size = 9)+
   geom_label_repel(data = annotate_1978,
                    aes(x = year,
                        y = lake_level_feet_above_sea_level),
@@ -153,17 +147,17 @@ ggplot(data = mono, aes(x = year, y = lake_level_feet_above_sea_level))+
                    nudge_y = -20,
                    color = "white",
                    segment.color = "#B47924",
-                   segment.size = 1,
+                   segment.size = 2,
                    label.padding = 0.65,
                    fill = "#B47924",
-                   size = 18,
+                   size = 9,
                    label.size = 0.1,
                    fontface = "bold")+
   geom_point(data = annotate_1983, 
              aes(x = year,
                  y = lake_level_feet_above_sea_level),
              color = "#3A8663",
-             size = 18)+
+             size = 9)+
   geom_label_repel(data = annotate_1983,
                    aes(x = year,
                        y = lake_level_feet_above_sea_level),
@@ -171,17 +165,17 @@ ggplot(data = mono, aes(x = year, y = lake_level_feet_above_sea_level))+
                    nudge_y = 28,
                    color = "white",
                    segment.color = "#3A8663",
-                   segment.size = 1,
+                   segment.size = 2,
                    label.padding = 0.65,
                    fill = "#3A8663",
-                   size = 18,
+                   size = 9,
                    label.size = 0.1,
                    fontface = "bold")+
   geom_point(data = annotate_1994, 
              aes(x = year,
                  y = lake_level_feet_above_sea_level),
              color = "#369590",
-             size = 18)+
+             size = 9)+
   geom_label_repel(data = annotate_1994,
                    aes(x = year,
                        y = lake_level_feet_above_sea_level),
@@ -189,30 +183,32 @@ ggplot(data = mono, aes(x = year, y = lake_level_feet_above_sea_level))+
                    nudge_y = -8,
                    color = "white",
                    segment.color = "#369590",
-                   segment.size = 1,
+                   segment.size = 2,
                    label.padding = 0.65,
                    fill = "#369590",
-                   size = 18,
+                   size = 9,
                    label.size = 0.1,
                    fontface = "bold")+
   geom_point(data = annotate_1998, 
              aes(x = year,
                  y = lake_level_feet_above_sea_level),
              color = "#332A8D",
-             size = 18)+
+             size = 9)+
   geom_label_repel(data = annotate_1998,
                    aes(x = year,
                        y = lake_level_feet_above_sea_level),
                    label = "Restoration \n Orders (1998)",
-                   nudge_y = 14,
+                   nudge_y = 13,
                    color = "white",
                    segment.color = "#332A8D",
-                   segment.size = 1,
+                   segment.size = 2,
                    label.padding = 0.65,
                    fill = "#332A8D",
-                   size = 18,
+                   size = 9,
                    label.size = 0.1,
-                   fontface = "bold")
+                   fontface = "bold")+
+  theme(axis.text = element_text(size = 30),
+        axis.title = element_text(size = 35, face = "bold"))
 ```
 
 **Figure 1. Mono Lake levels (1850-2017).** Changes in Mono Lake levels (feet above sea level) are shown from 1850 to 2017. Four lake water levels are shown. The first, at 6392 feet, is Decision 1613's mandated management level (the level Mono Lake must be allowed to rise to). At 6377 feet, land bridges emerge between the mainland and the islands, giving predators access to bird nesting areas. Next, at 6360 feet, birds' food sources are affected, which threatens the bird populations. If the lake level drops even lower to 6350 feet, the bird populations will be severely threatened. Five major events are also depicted on the graph. In 1941, the Los Angeles Department of Water and Power (LADWP) began diverting water from Mono Lake into Los Angeles, which caused an extreme drop in the lake level. In 1978, the Mono Lake Committee was formed to save Mono Lake. In 1983, the Committee won a lawsuite against LADWP, in which it claimed that the water diversions went against the Public Trust doctrine. In 1994, Decision 1613 was issued, which set a management lake level of 6392 feet that Mono Lake must be allowed to rise to, and required that DWP restore streams and habitats. In 1998, the State Water Board issued orders that required DWP to have a restoration plan.
