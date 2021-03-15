@@ -72,4 +72,4 @@ ggplot()+
 
 **Citation**
 
-AquaMaps (Kaschner, K., Rius-Barile, J., Kesner-Reyes, K., Garilao, C., Kullander, S., Rees, T., & Froese, R. (2016). AquaMaps: Predicted range maps for aquatic species. www.aquamaps.org
+AquaMaps (Kaschner, K., Rius-Barile, J., Kesner-Reyes, K., Garilao, C., Kullander, S., Rees, T., & Froese, R.). (2016). AquaMaps: Predicted range maps for aquatic species. www.aquamaps.org

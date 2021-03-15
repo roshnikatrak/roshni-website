@@ -21,7 +21,11 @@ library(sf)
 library(tmap)
 ```
 
-Initial Data Wrangling
+**Overview**
+
+This report includes maps depicting oil spills in California in 2008; data are from the California Department of Fish and Wildlife. It includes an interactive map of oil spill events in California and a choropleth of inland oil spills in each California county.
+
+**Initial Data Wrangling**
 
 ```{r, results = FALSE}
 #Read in the data
@@ -37,7 +41,7 @@ ca_counties %>% st_crs()
 oil_spill %>% st_crs()
 ```
 
-Creating the Interactive Map
+**Creating the Interactive Map**
 
 ```{r}
 #set tmap to interactive mode
@@ -52,7 +56,8 @@ tm_shape(ca_counties) +
 
 **Figure 1. Interactive map of oil spill events in California (2008).**
 
-Creating the Choropleth Map
+
+**Creating the Choropleth Map**
 
 ```{r}
 #join oil spill and CA
@@ -75,3 +80,7 @@ ggplot(data = oil_spill_inland_counts)+
 ```
 
 **Figure 2. Inland oil spills in each California county (2008).**
+
+**Citation**
+
+California Department of Fish and Wildlife. (2009). Oil Spill Incident Tracking [ds394]. OSPR Incident Tracking Database System. https://map.dfg.ca.gov/metadata/ds0394.html#ID0EUGA
