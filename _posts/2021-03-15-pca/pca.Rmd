@@ -27,6 +27,7 @@ In this report, several global environmental variables are explored. The selecte
 
 
 **Initial Data Exploration**
+
 ```{r}
 #read in world environmental data
 world_env <- read_csv(here("_posts", "2021-03-15-pca", "data", "world_env_vars.csv")) %>% 
@@ -40,6 +41,7 @@ world_env <- read_csv(here("_posts", "2021-03-15-pca", "data", "world_env_vars.c
 
 
 **Run PCA**
+
 ```{r}
 #PCA
 world_env_pca <- world_env %>% 
@@ -58,6 +60,7 @@ world_env_complete <- world_env %>%
 
 
 **Create Biplot**
+
 ```{r, height = 20, width = 20}
 autoplot(world_env_pca,
          data=world_env_complete,
@@ -92,6 +95,6 @@ The following bullets highlight major takeaways from the PCA that are visible in
 
 - Many countries overlap and therefore, those groups are similar overall.
 
-**Citation:**
+**Citation**
 
 zander_venter. (2018). Environmental variables for world countries, Version 5. Retrieved January 22, 2021 from https://www.kaggle.com/zanderventer/environmental-variables-for-world-countries.

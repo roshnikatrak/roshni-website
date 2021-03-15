@@ -21,7 +21,11 @@ library(sf)
 library(rnaturalearth)
 ```
 
-Initial Data Wrangling
+**Overview**
+
+This report contains a species richness map of 35 California cetacean species. Richness was calculated using probability of occurrence data that were based on relative environmental suitability; this included species preferences for water temperature, depth, salinity, and distance to land.
+
+**Initial Data Wrangling**
 
 ```{r, results = FALSE}
 #read in the data
@@ -50,7 +54,7 @@ species_richness_df <- raster::rasterToPoints(species_richness) %>% #convert to 
   filter(layer > 0) #remove zeros
 ```
 
-Plot Species Richness
+**Plot Species Richness**
 
 ```{r}
 ggplot()+
@@ -64,7 +68,8 @@ ggplot()+
        fill="Species Richness")
 ```
 
-**Figure 1. Cetacean species richness in the California Bight.** For 35 cetacean species, the probability of occurence was used to find species richness. The presence of each species was determined using a threshold value 0f 0.6. Data: AquaMaps (2016).
+**Figure 1. Cetacean species richness in the California Bight.** For 35 cetacean species, the probability of occurrence was used to find species richness. The presence of each species was determined using a threshold value 0f 0.6. Data: AquaMaps (2016).
 
-**Citation:** AquaMaps (Kaschner, K., Rius-Barile, J., Kesner-Reyes, K., Garilao, C., Kullander, S., Rees, T., & Froese, R. (2016). AquaMaps: Predicted range maps for aquatic species. www.aquamaps.org
+**Citation**
 
+AquaMaps (Kaschner, K., Rius-Barile, J., Kesner-Reyes, K., Garilao, C., Kullander, S., Rees, T., & Froese, R. (2016). AquaMaps: Predicted range maps for aquatic species. www.aquamaps.org
