@@ -18,9 +18,15 @@ library(tidyverse)
 library(here)
 library(janitor)
 library(ggrepel)
+library(showtext)
 ```
 
-Initial Data Wrangling
+**Overview**
+
+Mono Lake is a saline lake located on the eastern edge of the Sierra Nevada in California and is home to the Kootzaduka Tribe. Mono Lake has a highly productive ecosystem that includes brine shrimp. The lake also provides habitat for millions of annual migratory birds. Major events and legal decisions have affected lake levels over the past several decades. A figure was created to  visualize lake levels and the major events and decisions that impacted them.
+
+
+**Initial Data Wrangling**
 
 ```{r}
 #read in data, convert to lowercase snakecase, remove empty top rows
@@ -44,9 +50,17 @@ annotate_1998 <- mono %>%
   filter(year == 1998)
 ```
 
-Making Annotated Plot of Mono Lake Levels Over Time
+
+**Making Annotated Plot of Mono Lake Levels Over Time**
 
 ```{r, fig.width = 23, fig.height=14}
+#add font
+#font_add_google("Enriqueta", "en")
+
+#render text
+#showtext_auto()
+
+#create plot
 ggplot(data = mono, aes(x = year, y = lake_level_feet_above_sea_level))+
   geom_line(size = 3, color = "dodgerblue4")+
   labs(x = "Time (years)",
@@ -76,7 +90,6 @@ ggplot(data = mono, aes(x = year, y = lake_level_feet_above_sea_level))+
                   fill = "steelblue4",
                   alpha = 0.15)+ #fill area under line
   coord_cartesian(clip = "off")+
-  theme(plot.margin = unit(c(1,25,1,1), "lines"))+ #make room for annotations outside plot
   geom_label(label = "Decision 1613 mandated \n lake level (6392ft)",
              x = 2019,
              y = 6392,
@@ -207,7 +220,8 @@ ggplot(data = mono, aes(x = year, y = lake_level_feet_above_sea_level))+
                    size = 9,
                    label.size = 0.1,
                    fontface = "bold")+
-  theme(axis.text = element_text(size = 30),
+  theme(plot.margin = unit(c(1,25,1,1), "lines"), #make room for annotations outside plot
+        axis.text = element_text(size = 30),
         axis.title = element_text(size = 35, face = "bold"))
 ```
 
