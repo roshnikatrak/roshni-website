@@ -1,0 +1,97 @@
+---
+title: "PCA Analysis"
+description: |
+  Exploring relationships between world environmental variables.
+author:
+  - name: "Roshni Katrak-Adefowora"
+    url: {}
+date: 03-12-2021
+output:
+  distill::distill_article:
+    self_contained: false
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(tidyverse)
+library(here)
+library(janitor)
+library(GGally)
+library(ggfortify)
+```
+
+**Overview**
+
+In this report, several global environmental variables are explored. The selected variables are: annual temperature range (%), mean annual precipitation (mm), isothermality, and cloudiness (average number of cloudy days per year). A Principal Components Analysis (PCA) is performed, creating a biplot that allows us to visually explore the relationships between variables.
+
+
+**Initial Data Exploration**
+```{r}
+#read in world environmental data
+world_env <- read_csv(here("_posts", "2021-03-15-pca", "data", "world_env_vars.csv")) %>% 
+  clean_names()
+
+#run the following lines to check for linear relationships between variables
+# world_env %>% 
+#   select(temp_annual_range, rain_mean_annual, isothermality, cloudiness) %>% 
+#   ggpairs()
+```
+
+
+**Run PCA**
+```{r}
+#PCA
+world_env_pca <- world_env %>% 
+  select(temp_annual_range, rain_mean_annual, isothermality, cloudiness) %>% #variables included in PCA
+  drop_na() %>% 
+  scale() %>% #scale data
+  prcomp() #run PCA
+
+#view PCA loadings
+world_env_pca$rotation
+
+#subset to keep variables that are in PCA biplot as well as other variables
+world_env_complete <- world_env %>% 
+  drop_na(temp_annual_range, rain_mean_annual, isothermality, cloudiness)  
+```
+
+
+**Create Biplot**
+```{r, height = 20, width = 20}
+autoplot(world_env_pca,
+         data=world_env_complete,
+         loadings=T,
+         loadings.label=T,
+         loadings.label.hjust=-0.1,
+         loadings.label.vjust=-0.3,
+         loadings.colour = "red",
+         loadings.label.colour = "red",
+         loadings.label.size=4.5)+
+  geom_text(aes(label=country), col="black", size=2, alpha=0.6, vjust=1)+
+  theme_light()
+```
+
+**Figure 1. Principal component analysis (PCA) for world environmental variables.** This PCA includes the variables annual temperature range (%), mean annual precipitation (mm), isothermality, and cloudiness (average number of cloudy days per year), all of which are labeled in red with red loading arrows. Individual countries are labeled and represented by the black points.
+
+**Summary:**
+
+The following bullets highlight major takeaways from the PCA that are visible in the biplot.
+
+- PC1 explains 71.92% of the variance in the data and PC2 explains 18.14% of the variance.
+
+- Mean annual rainfall and cloudiness are the most highly correlated variables.
+
+- Annual temperature range and isothermality are highly negatively correlated.
+
+- Cloudiness and isothermality have no correlation.
+
+- All variables are pretty evenly weighted for PC1.
+
+- Cloudiness and isothermality have the largest loadings for PC2.
+
+- Many countries overlap and therefore, those groups are similar overall.
+
+**Citation:**
+
+zander_venter. (2018). Environmental variables for world countries, Version 5. Retrieved January 22, 2021 from https://www.kaggle.com/zanderventer/environmental-variables-for-world-countries.

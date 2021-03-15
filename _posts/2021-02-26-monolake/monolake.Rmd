@@ -23,7 +23,7 @@ library(showtext)
 
 **Overview**
 
-Mono Lake is a saline lake located on the eastern edge of the Sierra Nevada in California and is home to the Kootzaduka Tribe. Mono Lake has a highly productive ecosystem that includes brine shrimp. The lake also provides habitat for millions of annual migratory birds. Major events and legal decisions have affected lake levels over the past several decades. A figure was created to  visualize lake levels and the major events and decisions that impacted them.
+Mono Lake is a saline lake located on the eastern edge of the Sierra Nevada in California and is home to the Kootzaduka Tribe. Mono Lake has a highly productive ecosystem that includes brine shrimp. The lake also provides habitat for millions of annual migratory birds. Major events and legal decisions have affected lake levels over the past several decades. A figure is created to  visualize lake levels and the major events and decisions that impacted them.
 
 
 **Initial Data Wrangling**
